@@ -16,6 +16,7 @@ import { ComponentSource } from "./component-source";
 import { cn } from "@/lib/utils";
 
 import { Tabs, TabsContent, TabsList,TabsTrigger } from "./ui/tabs";
+import { CodeBlockWrapper } from "./code-block-wrapper";
 
 const components = {
   Accordion,
