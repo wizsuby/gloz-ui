@@ -45,11 +45,11 @@ export const docsConfig: DocsConfig = {
       ],
     },
     {
-      title: "Components",
+      title: "Animations",
       items: [
         {
-          title: "Accordion",
-          href: "/docs/components/accordion",
+          title: "Stagger Text",
+          href: "/docs/components/stagger-text",
           items: [],
         },
         

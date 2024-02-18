@@ -14,7 +14,43 @@ import fs from "fs";
 import path from "path";
 import { u } from "unist-builder";
 import { visit } from "unist-util-visit";
-import { Index } from "@/components/__registry__";
+
+// components/__registry__/index.tsx
+import React from "react";
+var Index = {
+  "default": {
+    "accordion": {
+      name: "accordion",
+      type: "components:ui",
+      registryDependencies: void 0,
+      component: React.lazy(() => import("@/components/ui/accordion")),
+      files: ["components/ui/accordion.tsx"]
+    },
+    "accordion-demo": {
+      name: "accordion-demo",
+      type: "components:example",
+      registryDependencies: ["accordion"],
+      component: React.lazy(() => import("@/registry/default/example/accordion-demo")),
+      files: ["registry/default/example/accordion-demo.tsx"]
+    },
+    "text-stagger": {
+      name: "text-stagger",
+      type: "components:ui",
+      registryDependencies: void 0,
+      component: React.lazy(() => import("@/registry/animations/source/staggered-text-animation")),
+      files: ["/registry/animations/source/staggered-text-animation.tsx"]
+    },
+    "text-stagger-demo": {
+      name: "text-stagger-demo",
+      type: "components:example",
+      registryDependencies: void 0,
+      component: React.lazy(() => import("@/registry/animations/demo/staggered-text-animation-demo")),
+      files: ["/registry/animations/demo/staggered-text-animation-demo.tsx"]
+    }
+  }
+};
+
+// lib/rehype-component.ts
 function rehypeComponent() {
   return async (tree) => {
     visit(tree, (node) => {
@@ -78,7 +114,6 @@ function rehypeComponent() {
       }
       if (node.name === "ComponentPreview") {
         const name = getNodeAttributeByName(node, "name")?.value;
-        console.log(name);
         if (!name) {
           return null;
         }
@@ -166,7 +201,8 @@ var Doc = defineDocumentType(() => ({
     },
     links: {
       type: "nested",
-      of: LinksProperties
+      of: LinksProperties,
+      required: false
     },
     featured: {
       type: "boolean",
@@ -227,4 +263,4 @@ export {
   Doc,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-TDHALXID.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-QXPLDGO3.mjs.map

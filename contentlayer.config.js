@@ -58,6 +58,7 @@ export const Doc = defineDocumentType(() => ({
     links: {
       type: "nested",
       of: LinksProperties,
+      required: false,
     },
     featured: {
       type: "boolean",

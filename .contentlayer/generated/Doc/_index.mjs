@@ -2,5 +2,6 @@
 
 import docs__indexMdx from './docs__index.mdx.json' assert { type: 'json' }
 import docs__components__accordionMdx from './docs__components__accordion.mdx.json' assert { type: 'json' }
+import docs__components__staggerTextMdx from './docs__components__stagger-text.mdx.json' assert { type: 'json' }
 
-export const allDocs = [docs__indexMdx, docs__components__accordionMdx]
+export const allDocs = [docs__indexMdx, docs__components__accordionMdx, docs__components__staggerTextMdx]

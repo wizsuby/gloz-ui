@@ -1,0 +1,63 @@
+---
+title: Stagger Text Animation
+description: A vertically stacked set of interactive headings that each reveal a section of content.
+---
+
+<ComponentPreview
+  name="text-stagger-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+/>
+
+## Installation
+
+
+
+
+
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+pnpm add framer-motion clsx tailwind-merge
+```
+
+<Step>Add util file on `lib/utils.ts`</Step>
+
+```tsx
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="text-stagger" />
+
+</Steps>
+
+## Usage
+
+```tsx
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+```
+
+```tsx
+<Accordion type="single" collapsible>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
