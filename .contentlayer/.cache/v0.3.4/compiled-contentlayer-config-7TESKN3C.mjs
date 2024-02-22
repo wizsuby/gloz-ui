@@ -19,20 +19,6 @@ import { visit } from "unist-util-visit";
 import React from "react";
 var Index = {
   "default": {
-    "accordion": {
-      name: "accordion",
-      type: "components:ui",
-      registryDependencies: void 0,
-      component: React.lazy(() => import("@/components/ui/accordion")),
-      files: ["components/ui/accordion.tsx"]
-    },
-    "accordion-demo": {
-      name: "accordion-demo",
-      type: "components:example",
-      registryDependencies: ["accordion"],
-      component: React.lazy(() => import("@/registry/default/example/accordion-demo")),
-      files: ["registry/default/example/accordion-demo.tsx"]
-    },
     "text-stagger": {
       name: "text-stagger",
       type: "components:ui",
@@ -46,6 +32,20 @@ var Index = {
       registryDependencies: void 0,
       component: React.lazy(() => import("@/registry/animations/demo/staggered-text-animation-demo")),
       files: ["/registry/animations/demo/staggered-text-animation-demo.tsx"]
+    },
+    "zoom-parallax": {
+      name: "zoom-parallax",
+      type: "components:ui",
+      registryDependencies: void 0,
+      component: React.lazy(() => import("@/registry/animations/source/zoom-paralax-animation")),
+      files: ["/registry/animations/source/zoom-paralax-animation.tsx"]
+    },
+    "zoom-parallax-demo": {
+      name: "zoom-parallax-demo",
+      type: "components:example",
+      registryDependencies: void 0,
+      component: React.lazy(() => import("@/registry/animations/demo/zoom-paralax-animation-demo")),
+      files: ["/app/examples/zoom-parallax/page.tsx"]
     }
   }
 };
@@ -263,4 +263,4 @@ export {
   Doc,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-QXPLDGO3.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-7TESKN3C.mjs.map

@@ -33,6 +33,7 @@ const StaggeredTextAnimation = ({
           before:absolute
           relative
           overflow-hidden
+          block
           pb-5"
           key={`${word}--${workIndex}`}
         >

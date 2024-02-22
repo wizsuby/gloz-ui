@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: "/docs/components",
-        destination: "/docs/components/accordion",
+        destination: "/docs/components/stagger-text",
         permanent: true,
       },
     ];

@@ -1,6 +1,6 @@
 ---
 title: Stagger Text Animation
-description: A vertically stacked set of interactive headings that each reveal a section of content.
+description: A sequential movement of individual letters or words for dynamic visual effects.
 ---
 
 <ComponentPreview
@@ -39,25 +39,3 @@ export function cn(...inputs: ClassValue[]) {
 <ComponentSource name="text-stagger" />
 
 </Steps>
-
-## Usage
-
-```tsx
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
-```
-
-```tsx
-<Accordion type="single" collapsible>
-  <AccordionItem value="item-1">
-    <AccordionTrigger>Is it accessible?</AccordionTrigger>
-    <AccordionContent>
-      Yes. It adheres to the WAI-ARIA design pattern.
-    </AccordionContent>
-  </AccordionItem>
-</Accordion>
-```

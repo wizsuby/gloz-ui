@@ -1,0 +1,85 @@
+---
+title: Parallax Zoom Animation
+description: A visual effect where objects zoom at varying speeds during changes in viewpoint, creating depth and immersion.
+---
+
+<ComponentPreview
+  name="zoom-parallax-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+/>
+
+## Installation
+
+
+
+
+
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+pnpm add framer-motion clsx tailwind-merge
+```
+
+<Step>Add util file on `lib/utils.ts`</Step>
+
+```tsx
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="zoom-parallax" />
+
+</Steps>
+
+## Usage
+
+To use the zoom-parallax component, import it into your project. If you've created your component in a specific directory, such as `@/registry/animations/source/zoom-paralax-animation`, ensure to reference its location accordingly during import.
+
+```tsx
+import ZoomParalaxAnimation from "@/registry/animations/source/zoom-paralax-animation";
+```
+To statically import the images, ensure they are included in your project's file structure. Then, create an array containing the images to be used within your application.
+```tsx
+// static import the images
+import Picture1 from "@/public/zoomParalax/picture1.jpg";
+import Picture2 from "@/public/zoomParalax/picture2.avif";
+import Picture8 from "@/public/zoomParalax/picture8.avif";
+import Picture4 from "@/public/zoomParalax/picture4.avif";
+import Picture5 from "@/public/zoomParalax/picture5.avif";
+import Picture6 from "@/public/zoomParalax/picture6.avif";
+import Picture7 from "@/public/zoomParalax/picture7.avif";
+
+// create a array of images
+const pictures = [
+  Picture1,
+  Picture2,
+  Picture8,
+  Picture4,
+  Picture5,
+  Picture6,
+  Picture7,
+];
+```
+The provided code snippet is an example of how to integrate the ZoomParallaxAnimation component into a React application.
+
+1. Enclose the component within a `<section>` tag for structural organization.
+2. Inside a `<div>` element with class `my-64` (which presumably applies styling), include the ZoomParallaxAnimation component.
+3. Pass the array of pictures (presumably containing image data) to the `pictures` prop of the ZoomParallaxAnimation component.
+
+This setup allows for the incorporation of the ZoomParallaxAnimation component, showcasing a series of pictures with parallax zoom effects within the designated section of the application.
+```tsx
+<section>
+  <div className="my-64 w-full">
+    <ZoomParalaxAnimation pictures={pictures} />
+  </div>
+</section>
+```

@@ -13,7 +13,7 @@ export const docsConfig: DocsConfig = {
     },
     {
       title: "Components",
-      href: "/docs/components/accordion",
+      href: "/docs/components/stagger-text",
     },
   ],
   sidebarNav: [
@@ -25,11 +25,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs",
           items: [],
         },
-        {
-          title: "Installation",
-          href: "/docs/installation",
-          items: [],
-        },
+        // {
+        //   title: "Installation",
+        //   href: "/docs/installation",
+        //   items: [],
+        // },
 
         // {
         //   title: "CLI",
@@ -50,6 +50,11 @@ export const docsConfig: DocsConfig = {
         {
           title: "Stagger Text",
           href: "/docs/components/stagger-text",
+          items: [],
+        },
+        {
+          title: "Zoom Parallax",
+          href: "/docs/components/zoom-parallax",
           items: [],
         },
         
