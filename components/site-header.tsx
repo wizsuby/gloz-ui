@@ -98,7 +98,7 @@ const CustomButton = () => {
           />
         </div>
         <DialogHeader>
-          <DialogTitle>👋 Hey, I'm Suby</DialogTitle>
+          <DialogTitle>👋 Hey, I&apos;m Suby</DialogTitle>
           <p>Founder of gloz.tech</p>
           <DialogDescription className="pt-2">
             <Balancer>
